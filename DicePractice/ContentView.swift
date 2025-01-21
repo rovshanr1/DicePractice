@@ -4,13 +4,11 @@ struct ContentView: View {
     @State private var  leftDice = 1
     @State private var  rightDice = 1
     @State private var isRolling = false
-    @State private var alertMessage = false
     
     var body: some View {
         ZStack {
             Color(red: 0.02, green: 0.38, blue: 0.15)
                 .ignoresSafeArea(.all)
-            
             VStack {
                 Image("diceeLogo")
                 Spacer()
@@ -58,6 +56,7 @@ struct ContentView: View {
                 timer.invalidate()
                 isRolling = false
             }
+            
         }
        
     }
